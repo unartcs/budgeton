@@ -1,5 +1,6 @@
 export default class Budget {
-  constructor(name, limit, used, items) {
+  constructor(id, name, limit, used, items) {
+    this.id = id;
     this.name = name;
     this.limit = limit;
     if (used) {
@@ -15,7 +16,7 @@ export default class Budget {
     });
     return this.used;
   };
-  addItem = (item) => {
+  addItem (item) {
     this.items.push(item);
   }
   removeItem = (item) => {
